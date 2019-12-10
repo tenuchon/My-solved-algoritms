@@ -6,11 +6,11 @@ public class BubbleSort {
         boolean isSorted = false;
         while (!isSorted) {
             isSorted = true;
-            for (int i = 1; i < array.length; i++) {
-                if (array[i] < array[i - 1]) {
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] < array[i + 1]) {
                     int temp = array[i];
-                    array[i] = array[i - 1];
-                    array[i - 1] = temp;
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
                     isSorted = false;
                 }
             }
@@ -18,8 +18,8 @@ public class BubbleSort {
     }
 
     private static void printArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (int anArray : array) {
+            System.out.print(anArray + " ");
         }
         System.out.println();
     }
